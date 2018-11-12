@@ -3,8 +3,8 @@
  */
 
 function hello() {
-
-  // WRITE YOUR EXERCISE 1 CODE HERE
+var output1=document.getElementById("output1");
+output1.innerHTML="Hello, AP Computer Science Principles!";
 
   ////////////////// DO NOT MODIFY
   check("hello"); // DO NOT MODIFY
@@ -17,14 +17,12 @@ function hello() {
 
 function helloAgain() {
 
-  //////////// DO NOT MODIFY
-  let name; // DO NOT MODIFY
-  //////////// DO NOT MODIFY
+  //////////// DO NOT MODIFY      Use the @name variable to store
+  let name; // DO NOT MODIFY      the value that the user enters
+  //////////// DO NOT MODIFY      in response to your prompt.
 
-  // Use the name variable declared above to store the user's response. You
-  // do not need to re-declare it, only assign it a value.
-
-  // WRITE YOUR EXERCISE 2 CODE HERE
+name=prompt("Please Enter Your Name");
+document.getElementById("output2").innerHTML=("Hello, " + name + "!");
 
   ///////////////////////////// DO NOT MODIFY
   check("helloAgain", name); // DO NOT MODIFY
@@ -44,7 +42,8 @@ function celsius() {
   // The above code generates a random number between -100 and 1000
   // (inclusive), and rounds this value to 2 decimal places.
 
-  // WRITE YOUR EXERCISE 3 CODE HERE
+var fahrenheit= ((cels * 9/5) + 32).toFixed(2);
+document.getElementById("output3").innerHTML=(cels + " degrees Celsius equals " + fahrenheit + " degrees Fahrenheit.");
 
   ////////////////////////// DO NOT MODIFY
   check("celsius", cels); // DO NOT MODIFY
@@ -64,7 +63,8 @@ function fahrenheit() {
   // The above code generates a random number between -100 and 1000
   // (inclusive), and rounds this value to 2 decimal places.
 
-  // WRITE YOUR EXERCISE 4 CODE HERE
+  var celsius= ((fahr-32)*(5/9)).toFixed(2);
+  document.getElementById("output4").innerHTML=(fahr + " degrees Fahrenheit equals " + celsius + " degrees Celsius.");
 
   ///////////////////////////// DO NOT MODIFY
   check("fahrenheit", fahr); // DO NOT MODIFY
@@ -88,7 +88,11 @@ function inches() {
   let inches = input; // DO NOT MODIFY
   ////////////////////// DO NOT MODIFY
 
-  // WRITE YOUR EXERCISE 5 CODE HERE
+var miles=Math.floor(inches/63360)
+var yards=Math.floor(inches/32) - (miles*63360);
+var feet=Math.floor((inches/36) - (miles*63360) - (yards*36));
+inches=Math.floor((inches/1) - (miles*63360) - (yards*36) (feet*12));
+document.getElementById("output5").innerHTML=("Miles: " + miles + "<br/>Yards: " + yards + "<br/>Feet: " + feet + "<br/>Inches: " + inches);
 
   ////////////////////////// DO NOT MODIFY
   check("inches", input); // DO NOT MODIFY
